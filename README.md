@@ -27,3 +27,10 @@ To connect to the server :arrow_right:
 
 ```sh
 cargo run --bin client
+```
+To send a message :arrow_right:
+```sh
+Hello, this is a test message.
+```
+Authors :busts_in_silhouette:
+Kernel-rb :smiley:
