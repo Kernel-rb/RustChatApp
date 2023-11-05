@@ -27,3 +27,21 @@ To connect to the server:
 ```sh
 cargo run --bin client
 ```
+To send a message:
+```sh
+Hello, this is a test message.
+```
+
+Authors:
+Kernel-rb
+
+License:
+This project is licensed under the MIT License.
+
+Contact:
+For any questions or issues, please open an issue.
+
+
+
+
+
