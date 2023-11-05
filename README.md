@@ -19,7 +19,6 @@ RustChatApp is a simple chat server and client written in Rust for real-time com
 
 - Basic chat functionality.
 - Server-client communication.
-- ...
 
 ## Examples
 
