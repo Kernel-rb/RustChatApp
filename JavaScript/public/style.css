@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.app{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+.app > .screen {
+    display: none;
+}
+.app > .screen.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.screen .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+}
+
+.screen .form-input {
+    width: 100%;
+    margin-bottom: 20px 0px;
+}
+.screen h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: royalblue;
+    border-bottom: 4px solid cyan;
+    padding: 5px 0px;
+    display: inline-block;
+}
+
+.screen h2::selection {
+    background-color: #31c423;
+    color: black; 
+}
+
+.screen .form-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+.screen .form-input label::selection {
+    background-color: yellow;
+    color: black
+}
+
+.screen .form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #16a2cc;
+    font-size: 12px;
+}
+
+.screen .form-input button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+
+}
+.screen .form-input button:hover {
+    background-color: royalblue;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.screen .form-input button:active {
+    transform: translateY(-1px);
+}
+
+.chat-screen .header {
+    background:royalblue;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.chat-screen .header .logo {
+    font-size: 18px;
+    color : #eee;
+    font-weight: 600;
+}
+
+.chat-screen .header .logo::selection {
+    background-color: yellow;
+    color: black
+}
+
+.chat-screen .header button {
+    padding : 5px 10px;
+    border : 1px solid #eee;
+    background: transparent;
+    color : #eee;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+.chat-screen .header button::selection {
+    background-color: red;
+    color: #eee ; 
+}
+
+.chat-screen .header button:hover {
+    background: #eee;
+    color : #111;
+}
+
+.chat-screen .messages {
+    width : 100%;
+    height: calc(100% - 100px);
+    background: #f5f5f5;
+    overflow: auto ;
+}
+
+.chat-screen .messages .message{
+    display: flex;
+    padding: 10px;
+}
+
+.chat-screen .messages .message > div {
+    max-width: 80%;
+    background: #fff;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0,0,05);
+    padding: 10px;
+}
+
+.chat-screen .messages .message.my-message {
+    justify-content: flex-end;
+    background-color: lightgreen; 
+    align-self: flex-end;
+}
+
+.chat-screen .messages .message.other-message {
+    justify-content: flex-start;
+    background-color: lightblue;
+    align-self: flex-start;
+}   
+
+
+
+.chat-screen .messages .message .name {
+    font-size: 20px;
+    color : #555 ;
+    margin-bottom: 5px;
+   
+}
+.chat-screen .messages .message .name::selection {
+    background-color: cyan;
+    color: black;
+   
+}
+.chat-screen .messages .message .text {
+    word-wrap: break-word;
+    
+   
+}
+
+.chat-screen .messages  .update {
+    text-align: center;
+    padding: 10px  ;
+    font-style: italic ;
+   
+}
+.chat-screen .messages  .update::selection{
+    background-color: gray;
+    color: black;
+}
+.chat-screen .typebox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.chat-screen .typebox input {
+        border: 2px solid transparent;
+        width: 40em;
+        height: 2.5em;
+        padding-left: 0.8em;
+        outline: none;
+        overflow: hidden;
+        background-color: #F3F3F3;
+        border-radius: 10px;
+        transition: all 0.5s;
+      
+}
+
+
+.chat-screen .typebox .input:hover,.input:focus {
+  border: 2px solid #4A9DEC;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+
+.chat-screen .typebox button {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.chat-screen .typebox button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+      
+}
+
+.chat-screen .typebox button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.chat-screen .typebox button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+.chat-screen .typebox button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+  
+.chat-screen .typebox button:hover span {
+    transform: translateX(5em);
+}
+  
+.chat-screen .typebox button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  
