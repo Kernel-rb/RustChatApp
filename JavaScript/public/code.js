@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     app.querySelector(" .chat-screen #exit-chat").addEventListener("click", function(){
         socket.emit("user exit", uname);
+// sourc
         window.location.href =  window.location.href;
     });
 
